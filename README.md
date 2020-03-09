@@ -1,68 +1,66 @@
+# Currency Converter Frontend 
+
+This repository hosts the FE application of the Currency Converter tool.
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Deployment Guide](#deployment-guide)
+   - [How to Checkout](#how-to-checkout)
+   - [How to Build](#how-to-build)
+   - [How to Run Locally](#how-to-run-locally)   
+3. [Features](#features)
+
+
+## Introduction
+
+**Technologies** <br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**Dependencies** <br>
+- [React](https://www.npmjs.com/package/react)
+- [React DOM](https://www.npmjs.com/package/react-dom)
+- [React Autocomplete](https://www.npmjs.com/package/react-autocomplete)
+- [React Scripts](https://www.npmjs.com/package/react-scripts)
+- [Bootstrap](https://getbootstrap.com/) 
 
-In the project directory, you can run:
 
-### `yarn start`
+## Deployment Guide
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### How to Checkout
+Checkout the codebase from GitHub:
+```bash
+$ git clone https://github.com/lochanar/currency-converter-fe.git
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### How to Build
+Run the following command in order to generate an optimized production build of the app. 
 
-### `yarn test`
+```bash
+$ yarn build
+```
+### How to Run Locally
+##### Development Mode
+The package manager used in this project is `yarn`. To install yarn, you can follow the [official guide](https://classic.yarnpkg.com/en/docs/install#debian-stable).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once yarn is installed, navigate to the project root and execute the following command:
+```bash
+$ yarn
+```
+This will initialize and install all the required dependencies.
 
-### `yarn build`
+In order to run the app in the development mode:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ yarn start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Visit [http://localhost:3000](http://localhost:3000) in the browser to use the app!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<ul>
+    <li><input type="checkbox" checked> Search for countries by name</li>
+    <li><input type="checkbox" checked> View information about countries - name, population, official currency </li>
+    <li><input type="checkbox" checked> Convert an amount in SEK to a local currency</li>
+    <li><input type="checkbox" checked> Update amount in real time to see coverted value in local currency</li>
+</ul>
