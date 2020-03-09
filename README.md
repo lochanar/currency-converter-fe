@@ -64,8 +64,8 @@ Visit [http://localhost:3000](http://localhost:3000) in the browser to use the a
 ## Features
 
 
-<input type="checkbox" checked> Search for countries by name<br>
-<input type="checkbox" checked> View information about countries - flag, name, population, official currency<br>
-<input type="checkbox" checked> Convert an amount in SEK to a local currency<br>
-<input type="checkbox" checked> Update SEK amount in real time to see converted value in local currency<br>
+[x] Search for countries by name<br>
+[x] View information about countries - flag, name, population, official currency<br>
+[x] Convert an amount in SEK to a local currency<br>
+[x] Update SEK amount in real time to see converted value in local currency<br>
 
