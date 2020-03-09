@@ -38,8 +38,13 @@ Run the following command in order to generate an optimized production build of 
 ```bash
 $ yarn build
 ```
+
+What now?
+
+Once you create the production build, you can serve the site using any of the options in [this guide](https://create-react-app.dev/docs/deployment/).
+
 ### How to Run Locally
-##### Development Mode
+#### Development Mode
 The package manager used in this project is `yarn`. To install yarn, you can follow the [official guide](https://classic.yarnpkg.com/en/docs/install#debian-stable).
 
 Once yarn is installed, navigate to the project root and execute the following command:
@@ -58,9 +63,9 @@ Visit [http://localhost:3000](http://localhost:3000) in the browser to use the a
 
 ## Features
 
-<ul>
-    <li><input type="checkbox" checked> Search for countries by name</li>
-    <li><input type="checkbox" checked> View information about countries - name, population, official currency </li>
-    <li><input type="checkbox" checked> Convert an amount in SEK to a local currency</li>
-    <li><input type="checkbox" checked> Update amount in real time to see coverted value in local currency</li>
-</ul>
+
+<input type="checkbox" checked> Search for countries by name<br>
+<input type="checkbox" checked> View information about countries - flag, name, population, official currency<br>
+<input type="checkbox" checked> Convert an amount in SEK to a local currency<br>
+<input type="checkbox" checked> Update SEK amount in real time to see converted value in local currency<br>
+

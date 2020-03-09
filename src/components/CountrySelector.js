@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactAutocomplete from 'react-autocomplete';
 import { getCountriesByName } from '../services/countryService';
+
+const GENERIC_ERROR_MESSAGE = 'Oops! Something went wrong...';
+
 class CountrySelector extends React.Component {
   timeout = null;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -11,14 +15,8 @@ class CountrySelector extends React.Component {
       isFetching: false,
     };
   }
+
   render() {
-    if (this.state.error) {
-      return (
-        <div className="alert alert-danger" role="alert">
-          {JSON.stringify(this.state.error)}
-        </div>
-      );
-    }
     return (
       <ReactAutocomplete
         items={this.state.countries}
@@ -70,11 +68,12 @@ class CountrySelector extends React.Component {
           overflow: 'auto',
           maxHeight: '50%',
           width: '100px',
-          zIndex: '100',
+          zIndex: '10',
         }}
       />
     );
   }
+
   fetchCountries(search) {
     clearTimeout(this.timeout);
     if (search) {
@@ -90,13 +89,14 @@ class CountrySelector extends React.Component {
             this.props.onError();
           },
           (error) => {
-            if(error && error.status === 404) {
+            if (error && error.status === 404) {
               this.setState({ isFetching: false, countries: [] });
-            } else if(error && error.status === 429) {
+            } else if (error && error.status === 429) {
               this.props.onError(error.message);
               this.setState({ isFetching: false, countries: [] });
             } else {
-              this.setState({ isFetching: false, error });
+              this.props.onError(GENERIC_ERROR_MESSAGE);
+              this.setState({ isFetching: false });
             }
           },
         );
@@ -106,4 +106,5 @@ class CountrySelector extends React.Component {
     }
   }
 }
+
 export default CountrySelector;

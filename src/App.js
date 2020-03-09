@@ -33,16 +33,26 @@ class App extends React.Component {
     this.setState({ amount: event.target.value });
   }
 
+  renderError() {
+    return (
+      <div className="row" style={{
+        display: this.state.error ? 'block' : 'none',
+      }}>
+        <div style={{
+          zIndex: '100'
+        }} className="alert alert-danger alert-dismissible fade show" role="alert">
+          {this.state.error}
+          <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>);
+  }
+
   render() {
     return (
       <div className="container-flex">
-        <div className="row" style={{
-          display: this.state.error ? 'block' : 'none',
-        }}>
-          <div className="alert alert-danger" role="alert">
-            {this.state.error}
-          </div>
-        </div>
+        {this.renderError()}
         <div className="row">
           <div className="col-md-6 col-sm-12">
             <div className="input-group mb-3">
