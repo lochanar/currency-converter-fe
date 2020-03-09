@@ -69,3 +69,4 @@ Visit [http://localhost:3000](http://localhost:3000) in the browser to use the a
 - Convert an amount in SEK to a local currency<br>
 - Update SEK amount in real time to see converted value in local currency<br>
 
+![github-medium](docs/currency-converter.png)
