@@ -1,9 +1,9 @@
-const LOGIN_URL = 'http://localhost:3001/login';
-const countryAPIURL = 'http://localhost:3001/api/v1/countries';
+const BFF_URL = 'http://localhost:3001';
 
 let token = null;
 
 async function getCountriesByName(name) {
+  const countryAPIURL = `${BFF_URL}/api/v1/countries`;
   if(!token) {
     try {
       token = await getToken();
@@ -22,8 +22,9 @@ async function getCountriesByName(name) {
 }
 
 async function getToken() {
+  const loginURL = `${BFF_URL}/login`;
   return new Promise((resolve, reject) => {
-    fetch(LOGIN_URL)
+    fetch(loginURL)
       .then((res) => {
         if(res.status === 429) {
           return reject({
